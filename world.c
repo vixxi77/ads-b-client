@@ -17,10 +17,10 @@ const double LITHUANIA_VERTEX[] = {26.494331495883756,55.615106919977634,26.5882
 
 void draw_lt(const double *_lithuania_vertex, int count, int *previous_x, int *previous_y, float _zoom){
 
-	const double minLon = 20.9;
-	const double maxLon = 26.8;
-	const double minLat = 53.9;
-	const double maxLat = 56.45;
+	const float minLon = 20.9;
+	const float maxLon = 26.8;
+	const float minLat = 53.9;
+	const float maxLat = 56.45;
 
 	float lonCenter = (minLon + maxLon) * 0.5;
 	float latCenter = (minLat + maxLat) * 0.5;
@@ -54,8 +54,8 @@ int main(){
 	SetTargetFPS(30);
 	
 	while(!WindowShouldClose()){
-		if(IsKeyDown(KEY_UP)) *pzoom *= 1.1f;
-		if(IsKeyDown(KEY_DOWN)) *pzoom *= 0.9f;
+		if(IsKeyDown(KEY_UP)) *pzoom *= 0.8f;
+		if(IsKeyDown(KEY_DOWN)) *pzoom *= 1.2f;
 		BeginDrawing();
 		ClearBackground(BLACK);
 		draw_lt(LITHUANIA_VERTEX, sizeof(LITHUANIA_VERTEX) / sizeof(double), &previous_x, &previous_y, *pzoom);
