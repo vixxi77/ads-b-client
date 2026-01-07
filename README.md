@@ -3,7 +3,7 @@ ADS-B Plane traking project
 Will feature:
 
 -Raylib client (retro looking ahh)
--Raw C posix socket comms with server
+- Raw C posix socket comms with server
 -.NET Server
 -Maybe htmx web client too
 -SBC Node with ads-b antenna with SDR 
