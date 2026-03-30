@@ -10,7 +10,7 @@ Will feature:
 - Server hosted on a VPS (but will try to host on my own servers and use VPS as a proxy)
 - Read only backend for clients
 
-Strectch goal:
+Stretch goal:
 
 - Entire system could be ran entirely by home grown server
 - VPS is for routing traffic from the SBC to my home server and back to clients
