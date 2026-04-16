@@ -37,7 +37,7 @@ void draw_lt(const double *_lithuania_vertex, int count, int *previous_x, int *p
 		int x = (int)(((longtitude - zoomMinLon) / (zoomMaxLon - zoomMinLon)) * SCREEN_WIDTH);
 		int y = (int)(((zoomMaxLat - latitude) / (zoomMaxLat - zoomMinLat)) * SCREEN_HEIGHT);
 		DrawCircle(x, y, 1, RED);
-		printf("x: %d, y: %d \n", x, y);
+		//printf("x: %d, y: %d \n", x, y);
 		if(i == 0){
 			*previous_x = x;
 			*previous_y = y;
@@ -53,7 +53,9 @@ int main(){
 	InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Europe");
 	SetTargetFPS(30);
 	
+	
 	while(!WindowShouldClose()){
+		DrawFPS(10, 10);
 		if(IsKeyDown(KEY_UP)) *pzoom *= 0.8f;
 		if(IsKeyDown(KEY_DOWN)) *pzoom *= 1.2f;
 		BeginDrawing();
